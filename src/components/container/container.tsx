@@ -8,14 +8,16 @@ interface ContainerProps {
 }
 
 const ContainerContent = styled.div`
-    background: radial-gradient(862px at 6% 18%, var(--background-002) 9.4%, var(--background-001) 83.6%);
-    backdrop-filter: blur(2px);
-    border-top: 1.5px solid var(--background-003);
-    border-left: 1px solid var(--background-003);
-    border-right: 1px solid var(--background-003);
-    border-bottom: 2px solid var(--background-003);
+    background: linear-gradient(
+        109.6deg, var(--background-001) 11.2%, var(--background-002) 51.2%, var(--background-003) 98.6%
+    );
+    border-top: 1.5px outset var(--background-004);
+    border-left: 1px outset var(--background-004);
+    border-right: 1px outset var(--background-004);
+    border-bottom: 2px outset var(--background-004);
     border-radius: 12px;
     clip-path: polygon(0% 15%, 0 0, 15% 0%, 71% 0, 79% 9%, 100% 9%, 100% 85%, 100% 100%, 85% 100%, 8% 100%, 0 89%, 0 89%);
+    filter: drop-shadow(0 0 1px var(--background-006));
 
     display: flex;
     justify-content: center;
@@ -31,6 +33,7 @@ const ContainerContent = styled.div`
 
     height: 75%;
     width: 70%;
+    overflow: hidden;
 `
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
