@@ -1,6 +1,9 @@
 'use client'
 
 import { styled } from "styled-components";
+import Navbar from "../navbar/navbar";
+import Table from "../table/table";
+import { tablet, laptopL } from "@/app/screens";
 
 
 interface ContainerProps {
@@ -20,26 +23,35 @@ const ContainerContent = styled.div`
     filter: drop-shadow(0 0 1px var(--background-006));
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 
     position: absolute;
-    padding: 15px;
     top: 50%;
-    bottom: 50%;
     left: 50%;
-    right: 50%;
     transform: translate(-50%, -50%);
 
     height: 75%;
-    width: 70%;
+    width: 90%;
     overflow: hidden;
+
+    @media only screen and (min-width: ${tablet}) {
+        width: 80%;
+    }
+
+    @media only screen and (min-width: ${laptopL}) {
+        width: 70%;
+    }
 `
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
     return (
         <ContainerContent>
-            {children}
+            <Navbar />
+            <Table>
+                {children}
+            </Table>
         </ContainerContent>
     );
 }
