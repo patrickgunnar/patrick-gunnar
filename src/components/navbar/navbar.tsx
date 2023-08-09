@@ -50,7 +50,7 @@ const NavbarOpt = styled.button<{ disabled: boolean }>`
     cursor: ${ (props) => props.disabled ? 'default' : 'pointer' };
     color: inherit;
     font-weight: 400;
-    font-family: inherit;
+    font-family: 'Tektur', cursive;
     font-size: .85rem;
 
     position: relative;
@@ -153,9 +153,9 @@ const MobileLabel = styled.label`
     padding-right: 20px;
 
     text-align: start;
-    font-size: .9rem;
-    font-weight: 300;
-    font-family: inherit;
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: 'Orbitron', sans-serif;
 
     white-space: nowrap;      
     overflow: hidden;         
