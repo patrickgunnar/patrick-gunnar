@@ -106,6 +106,10 @@ const MobileMenu = styled.button<{ open: boolean }>`
     border: none;
     border: none;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: inherit;
     font-weight: 400;
     font-family: inherit;
