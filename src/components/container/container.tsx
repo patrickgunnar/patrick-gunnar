@@ -8,8 +8,8 @@ interface ContainerProps {
 }
 
 const ContainerContent = styled.div`
-    background: var(--background-002);
-    backdrop-filter: blur(4px);
+    background: radial-gradient(862px at 6% 18%, var(--background-002) 9.4%, var(--background-001) 83.6%);
+    backdrop-filter: blur(2px);
     border-top: 1.5px solid var(--background-003);
     border-left: 1px solid var(--background-003);
     border-right: 1px solid var(--background-003);
