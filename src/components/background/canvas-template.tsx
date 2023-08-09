@@ -38,8 +38,10 @@ const CanvasTemplate = () => {
         canvasElement.width = window.innerWidth
 
         // matrix content
-        const matrix = 'Patrick Gunnar'.split('')
-        const fontSize = 10
+        const matrix = (
+            'Unveil the Hidden Gem: Welcome the Maestro of Code, the Artisan of Innovation, Patrick Gunnar, to Elevate the Digital Symphony of Your Company with Unsurpassed Full-Stack Mastery'
+        ).split('')
+        const fontSize = 12
         // size of the matrix columns
         const columns = canvasElement.width / fontSize
         // array drops
