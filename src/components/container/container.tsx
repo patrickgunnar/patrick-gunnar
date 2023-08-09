@@ -1,4 +1,4 @@
-'use client'
+'use server'
 
 import { styled } from "styled-components";
 import Navbar from "../navbar/navbar";
