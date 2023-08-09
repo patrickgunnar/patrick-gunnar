@@ -6,6 +6,7 @@
 	--background-003: #00ff0075;
 	--background-004: #00000035;
 	--background-005: #000000;
+	--background-006: #ffffff;
 }
 
 :root,
@@ -17,6 +18,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	font-family: 'Kanit', sans-serif;
+	color: var(--background-006);
 
 	margin: 0;
 	padding: 0;
