@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
+
 :root {
 	--background-001: #000000;
+	--background-002: #00ff0025;
+	--background-003: #00ff0075;
+	--background-004: #00000035;
 }
 
 :root,
 html,
-body {
+body,
+main {
 	background: var(--background-001);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Kanit', sans-serif;
 
 	margin: 0;
 	padding: 0;
