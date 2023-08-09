@@ -1,7 +1,7 @@
 'use client'
 
 import { styled } from "styled-components";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 
 const NavbarContainer = styled.nav`
@@ -21,11 +21,17 @@ const NavbarContainer = styled.nav`
     }
 `
 
-const NavbarOpt = styled.button`
-    background: transparent;
+const NavbarOpt = styled.button<{ disabled: boolean }>`
+    background: ${
+        (props) => props.disabled ? (
+            'linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);'
+        ) : (
+            'transparent'
+        )
+    };
     border: none;
 
-    cursor: pointer;
+    cursor: ${ (props) => props.disabled ? 'default' : 'pointer' };
     color: inherit;
     font-weight: 400;
     font-family: inherit;
@@ -63,28 +69,35 @@ const NavbarOpt = styled.button`
 const Navbar = () => {
     // get router
     const router = useRouter()
+    // current pathname
+    const pathname = usePathname()
+
+    // route handler
+    const handleRouting = (route: string) => {
+        router.push(route)
+    }
 
     return (
         <NavbarContainer>
-            <NavbarOpt onClick={() => router.push('/')}>
+            <NavbarOpt onClick={() => handleRouting('/')} disabled={pathname === '/'}>
                 Home
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/myself')}>
+            <NavbarOpt onClick={() => handleRouting('/myself')} disabled={pathname === '/myself'}>
                 Myself
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/skills')}>
+            <NavbarOpt onClick={() => handleRouting('/skills')} disabled={pathname === '/skills'}>
                 Skills
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/projects')}>
+            <NavbarOpt onClick={() => handleRouting('/projects')} disabled={pathname === '/projects'}>
                 Projects
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/resume')}>
+            <NavbarOpt onClick={() => handleRouting('/resume')} disabled={pathname === '/resume'}>
                 Resumé
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/contact')}>
+            <NavbarOpt onClick={() => handleRouting('/contact')} disabled={pathname === '/contact'}>
                 Contact
             </NavbarOpt>
-            <NavbarOpt onClick={() => router.push('/articles')}>
+            <NavbarOpt onClick={() => handleRouting('/articles')} disabled={pathname === '/articles'}>
                 Articles
             </NavbarOpt>
         </NavbarContainer>
