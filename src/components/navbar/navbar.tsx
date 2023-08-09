@@ -1,3 +1,5 @@
+'use client'
+
 import { styled } from "styled-components";
 
 
@@ -9,7 +11,6 @@ const NavbarContainer = styled.nav`
     grid-template-columns: repeat(auto-fit, minmax(0, calc(92% / 7)));
 
     position: relative;
-
     height: 9%;
     width: 79%;
 
