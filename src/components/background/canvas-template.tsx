@@ -56,7 +56,7 @@ const CanvasTemplate = () => {
             context.fillStyle = '#0000000a'
             context.fillRect(0, 0, canvasElement.width, canvasElement.height)
 
-            context.fillStyle = '#00ff00'
+            context.fillStyle = '#007bff'
             context.font = `${fontSize}px arial`
 
             // loop over the drops
