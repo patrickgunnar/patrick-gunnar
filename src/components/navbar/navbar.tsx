@@ -1,6 +1,7 @@
 'use client'
 
 import { styled } from "styled-components";
+import { useRouter } from "next/navigation";
 
 
 const NavbarContainer = styled.nav`
@@ -60,27 +61,30 @@ const NavbarOpt = styled.button`
 `
 
 const Navbar = () => {
+    // get router
+    const router = useRouter()
+
     return (
         <NavbarContainer>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/')}>
                 Home
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/myself')}>
                 Myself
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/skills')}>
                 Skills
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/projects')}>
                 Projects
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/resume')}>
                 Resumé
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/contact')}>
                 Contact
             </NavbarOpt>
-            <NavbarOpt>
+            <NavbarOpt onClick={() => router.push('/articles')}>
                 Articles
             </NavbarOpt>
         </NavbarContainer>
