@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
 
@@ -30,7 +30,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: 'Saira', sans-serif;
+	font-family: 'Quantico', sans-serif;
 	color: var(--background-006);
 
 	margin: 0;
