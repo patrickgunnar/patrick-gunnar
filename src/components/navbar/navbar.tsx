@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
 import { tablet } from "@/app/screens";
 import { useState } from "react";
+import { IoClose, IoMenu } from "react-icons/io5"
 
 
 const NavbarContainer = styled.section`
@@ -229,7 +230,13 @@ const Navbar = () => {
                 </DesktopNav>
                 <MobileContainer>
                     <MobileMenu open={isMobileOpen} onClick={() => handleMobileOpen(isMobileOpen)}>
-                        Menu
+                        {
+                            isMobileOpen ? (
+                                <IoClose size={19} />
+                            ) : (
+                                <IoMenu size={19} />
+                            )
+                        }
                     </MobileMenu>
                     <MobileLabel>
                         { pathname === '/' && 'Home: Engaging Introduction' }
