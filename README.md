@@ -1,3 +1,37 @@
+## Patrick Gunnar - Full-Stack Web Artisan
+
+**LinkedIn:** [https://www.linkedin.com/in/patrickgunnar/](https://www.linkedin.com/in/patrickgunnar/)
+**GitHub:** [https://github.com/patrickgunnar](https://github.com/patrickgunnar)
+
+### About Me
+I am a creative app developer passionate about transforming abstract ideas into immersive digital experiences. Blending my programming foundation with a design-driven approach, I'm dedicated to crafting intuitive solutions that enhance users' lives.
+
+### Expertise
+My dynamic skill set within app development converges to create exceptional user experiences:
+
+- **UI/UX Design:** Proficient in designing user-centric interfaces that seamlessly merge functionality with aesthetics, resulting in visually pleasing and user-friendly apps.
+- **User Journeys:** Specialized in orchestrating smooth user journeys, ensuring seamless navigation and interaction across app features.
+- **Back-end Integration:** Experienced in integrating robust back-end systems that enhance app functionality and reliability.
+
+### App Portfolio
+My portfolio reflects my commitment to innovation and excellence. Highlighted projects include:
+
+- **OrionRent:** Creator of OrionRent, a versatile app revolutionizing property rentals by connecting users with their ideal spaces for short and long-term stays.
+- **SunTime:** Designer of SunTime, a unique clock app merging functionality with artistic expression, offering a novel way to perceive time.
+- **Atomico:** Architect of Atomico, a potent to-do list app that balances simplicity and sophistication to empower efficient task management.
+- **Spotify Clone:** Engineered a Spotify replica, delivering a music streaming experience that resonates with users' passion for music.
+- **Airbnb Clone:** Innovator behind an Airbnb-inspired app, seamlessly connecting travelers with accommodations that capture the spirit of wanderlust.
+
+### Vision
+I envision a future where apps seamlessly integrate into users' daily lives, merging innovation with practicality in app development.
+
+### Let's Connect
+I'm eager to connect with fellow developers, designers, and visionaries who share my passion. Whether it's discussing industry trends, exploring collaborations, or sharing insights, I welcome the opportunity to connect and co-create.
+
+Thank you for exploring my profile. Together, we can shape the future of app innovation and create user experiences that leave a lasting impact.
+
+**SKILLS:** Next.js · React.js · TypeScript · Tailwind CSS · styled-components · JavaScript · MongoDB · Supabase
+
 ## Project Details
 
 ### OrionRent: Elevating Property Rentals with Cutting-Edge Technologies 🏠
