@@ -3,15 +3,15 @@
 import { styled } from "styled-components"
 
 
-const Container = styled.div`
+const PageContainer = styled.div`
 	color: white;
 `
 
 export default function Home() {
 	return (
-		<Container>
+		<PageContainer>
 			Patrick Gunnar
-		</Container>
+		</PageContainer>
 	)
 }
 
