@@ -244,7 +244,7 @@ const Navbar = () => {
                     </MobileMenu>
                     <MobileLabel>
                         { pathname === '/' && 'Home: Engaging Introduction' }
-                        { pathname === '/myself' && 'Myself: Web Artisan!' }
+                        { pathname === '/myself' && 'Myself: The Web Artisan!' }
                         { pathname === '/skills' && 'Skills: Expert Proficiency' }
                         { pathname === '/projects' && 'Projects: Innovative Showcases' }
                         { pathname === '/resume' && 'Resumé: Accomplishments Summary' }
