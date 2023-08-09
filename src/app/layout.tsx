@@ -1,6 +1,7 @@
 import CanvasTemplate from '@/components/background/canvas-template'
 import './globals.css'
 import type { Metadata } from 'next'
+import Container from '@/components/container/container'
 
 
 export const metadata: Metadata = {
@@ -18,7 +19,9 @@ export default function RootLayout({
 			<body>
 				<CanvasTemplate />
 				<main>
-					{children}
+					<Container>
+						{children}
+					</Container>
 				</main>
 			</body>
 		</html>
