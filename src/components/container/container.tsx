@@ -21,12 +21,16 @@ const ContainerContent = styled.div`
     justify-content: center;
     align-items: center;
 
-    position: relative;
+    position: absolute;
     padding: 15px;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
 
     height: 75%;
     width: 70%;
-    overflow: hidden;
 `
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
