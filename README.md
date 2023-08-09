@@ -1,5 +1,3 @@
-Of course, I understand. Here are the detailed project descriptions from your CV:
-
 ## Project Details
 
 ### OrionRent: Elevating Property Rentals with Cutting-Edge Technologies 🏠
