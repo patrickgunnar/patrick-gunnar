@@ -233,7 +233,7 @@ const Navbar = () => {
                     </NavbarOpt>
                 </DesktopNav>
                 <MobileContainer>
-                    <MobileMenu open={isMobileOpen} onClick={() => handleMobileOpen(isMobileOpen)}>
+                    <MobileMenu open={isMobileOpen} onClick={() => handleMobileOpen(isMobileOpen)} data-testid="mobileMenuBtn">
                         {
                             isMobileOpen ? (
                                 <IoClose size={19} />

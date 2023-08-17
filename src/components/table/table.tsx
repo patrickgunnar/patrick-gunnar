@@ -20,7 +20,7 @@ const TableContainer = styled.article`
 
 const Table: React.FC<TableProps> = ({ children }) => {
     return (
-        <TableContainer>
+        <TableContainer data-testid="tableContainer">
             {children}
         </TableContainer>
     );

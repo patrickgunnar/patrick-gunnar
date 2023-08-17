@@ -47,7 +47,7 @@ const ContainerContent = styled.div`
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
     return (
-        <ContainerContent>
+        <ContainerContent data-testid="containerContent">
             <Navbar />
             <Table>
                 {children}
