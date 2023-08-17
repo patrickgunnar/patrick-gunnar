@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import CanvasTemplate from "@/components/background/canvas-template";
 
+
 test('background matrix', async () => {
     render(<CanvasTemplate />)
 
