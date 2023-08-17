@@ -87,7 +87,7 @@ const CanvasTemplate = () => {
     }, [])
 
     return (
-        <CanvasContent ref={canvasRef} />
+        <CanvasContent ref={canvasRef} data-testid="matrixBackground" />
     );
 }
  
