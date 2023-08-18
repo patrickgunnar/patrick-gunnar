@@ -2,7 +2,7 @@
 
 import { styled } from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
-import { laptop, tablet } from "@/app/screens";
+import { laptop } from "@/app/screens";
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5"
 
@@ -179,7 +179,7 @@ const MobileNav = styled.nav`
     height: 91%;
     width: 100%;
 
-    @media only screen and (min-width: ${tablet}) {
+    @media only screen and (min-width: ${laptop}) {
         display: none;
     }
 `
