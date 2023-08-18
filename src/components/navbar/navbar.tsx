@@ -2,7 +2,7 @@
 
 import { styled } from "styled-components";
 import { useRouter, usePathname } from "next/navigation";
-import { tablet } from "@/app/screens";
+import { laptop, tablet } from "@/app/screens";
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5"
 
@@ -32,7 +32,7 @@ const DesktopNav = styled.nav`
         width: 160%;
     }
 
-    @media only screen and (min-width: ${tablet}) {
+    @media only screen and (min-width: ${laptop}) {
         display: grid;
     }
 `
@@ -84,13 +84,13 @@ const NavbarOpt = styled.button<{ disabled: boolean }>`
 
 const MobileContainer = styled.section`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     height: 100%;
     width: 100%;
 
-    @media only screen and (min-width: ${tablet}) {
+    @media only screen and (min-width: ${laptop}) {
         display: none;
     }
 `
