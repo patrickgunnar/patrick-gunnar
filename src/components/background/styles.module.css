@@ -1,0 +1,13 @@
+.canvas_content__styles {
+    display: flex;
+
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    position: absolute;
+
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
+}
