@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap');
 
 :root {
 	--background-001: #242d39bf;
@@ -21,7 +22,7 @@
 	--background-016: #4a626e;
 	--background-017: #1e2130;
 
-	--sb-size: 5px;
+	--sb-size: 2px;
 	--sb-thumb-color-001: #003459;
 	--sb-thumb-color-002: #00a8e8;
 	--sb-thumb-color-003: #264c8c;
