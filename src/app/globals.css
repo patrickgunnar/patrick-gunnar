@@ -20,6 +20,13 @@
 	--background-015: #242d39;
 	--background-016: #4a626e;
 	--background-017: #1e2130;
+
+	--sb-size: 5px;
+	--sb-thumb-color-001: #003459;
+	--sb-thumb-color-002: #00a8e8;
+	--sb-thumb-color-003: #264c8c;
+	--sb-thumb-color-004: #1f3f74;
+	--sb-track-color: #242d39;
 }
 
 :root,
@@ -41,4 +48,27 @@ main {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	width: var(--sb-size)
+}
+
+::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: radial-gradient(circle at 10% 20%, var(--sb-thumb-color-001) 0%, var(--sb-thumb-color-002) 90%);
+	border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--sb-thumb-color-002);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: var(--sb-thumb-color-002);
 }
