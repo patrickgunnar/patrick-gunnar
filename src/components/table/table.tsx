@@ -1,3 +1,5 @@
+'use client'
+
 import { styled } from "styled-components";
 
 
@@ -11,7 +13,6 @@ const TableContainer = styled.article`
     justify-content: center;
     align-items: center;
     
-    padding: 10px;
     position: relative;
 
     height: 91%;
