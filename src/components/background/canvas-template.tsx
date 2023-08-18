@@ -1,22 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from "react";
-import styled from "styled-components";
+import "./styles.module.css";
 
-
-const CanvasContent = styled.canvas`
-    display: flex;
-
-    top: 0;
-    left: 0;
-    white-space: nowrap;
-    position: absolute;
-
-    min-height: 100vh;
-    min-width: 100vw;
-    height: 100vh;
-    width: 100vw;
-`
 
 const CanvasTemplate = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -87,7 +73,7 @@ const CanvasTemplate = () => {
     }, [])
 
     return (
-        <CanvasContent ref={canvasRef} data-testid="matrixBackground" />
+        <canvas ref={canvasRef} className="canvas_content__styles" data-testid="matrixBackground"></canvas>
     );
 }
  
