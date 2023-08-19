@@ -199,7 +199,7 @@ const IntroduceContent = () => {
                     Amidst the rhythmic dance of pixels and code, I am driven by a thirst for mastery. TypeScript flows through my veins, empowering me to transform visions into reality with graceful efficiency. Each line of code becomes a brushstroke on the canvas of the digital cosmos, a manifestation of my dedication to precision and creativity.
                 </ParagraphWrapper>
                 <ParagraphWrapper>
-                    As we embark on this collaborative journey, envision the virtual tapestries we shall weave. With every click, scroll, and interaction, we shall unveil worlds where technology harmonizes with imagination, creating moments of awe that transcend the ordinary. Join me, and together, let's sculpt a narrative where innovation knows no bounds and every pixel pulsates with the heartbeat of a captivating tale.
+                    As we embark on this collaborative journey, envision the virtual tapestries we shall weave. With every click, scroll, and interaction, we shall unveil worlds where technology harmonizes with imagination, creating moments of awe that transcend the ordinary. Join me, and together, let&apos;s sculpt a narrative where innovation knows no bounds and every pixel pulsates with the heartbeat of a captivating tale.
                 </ParagraphWrapper>
                 <ParagraphWrapper>
                     In this realm of endless possibilities, I extend my hand to you, fellow explorer. Let curiosity guide our steps as we craft, create, and conjure the future of the digital landscape.
