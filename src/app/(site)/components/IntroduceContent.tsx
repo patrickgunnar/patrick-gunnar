@@ -104,7 +104,7 @@ const IntroduceContent = () => {
 
     return (
         <ContentWrapper>
-            <TextWrapper>
+            <TextWrapper margin="left: 2%;">
                 <TitleWrapper>
                     Salutations, kindred explorer of the digital realm,
                 </TitleWrapper>
@@ -127,7 +127,7 @@ const IntroduceContent = () => {
                     In this realm of endless possibilities, I extend my hand to you, fellow explorer. Let curiosity guide our steps as we craft, create, and conjure the future of the digital landscape.
                 </ParagraphWrapper>
             </TextWrapper>
-            <DockWrapper>
+            <DockWrapper margin="right: 2%;">
                 <TitleFrame>Harmonizing Tunes</TitleFrame>
                 <ProfileWrapper>
                     <ProfileButton onClick={() => handleProfileOpen('https://www.linkedin.com/in/patrickgunnar/')}>
