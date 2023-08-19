@@ -1,8 +1,9 @@
+import MyselfContent from "./components/MyselfContent";
+
+
 export default function Myself() {
 	return (
-		<div>
-			Myself
-		</div>
+		<MyselfContent />
 	)
 }
 
