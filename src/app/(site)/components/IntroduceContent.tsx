@@ -12,11 +12,14 @@ const ContentWrapper = styled.div`
     display: flex;
     gap: 10px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
 
     height: 100%;
     width: 100%;
+
+    overflow: hidden;
+    overflow-y: auto;
 
     @media only screen and (min-width: ${laptop}) {
         flex-direction: row;
@@ -34,14 +37,10 @@ const TextWrapper = styled.div`
     align-items: center;
 
     padding: 10px;
-    height: 70%;
+    height: auto;
     width: 100%;
 
-    overflow: hidden;
-    overflow-y: auto;
-
     @media only screen and (min-width: ${laptop}) {
-        height: 90%;
         width: 75%;
     }
 `
@@ -79,13 +78,12 @@ const DockWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    height: 28%;
-    width: 100%;
-
-    overflow: hidden;
+    margin-bottom: 15px;
+    height: auto;
+    width: 90%;
 
     @media only screen and (min-width: ${laptop}) {
-        height: 90%;
+        margin-bottom: 0;
         width: 20%;
     }
 `
@@ -94,6 +92,9 @@ const TitleFrame = styled.label`
     background: linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);
     filter: drop-shadow(0 0 1px var(--background-006));
     box-sizing: border-box;
+    border: none;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: 700;
@@ -107,28 +108,22 @@ const TitleFrame = styled.label`
 const ProfileWrapper = styled.div`
     box-sizing: border-box;
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
+    justify-content: start;
+    align-items: center;
 
-    margin-bottom: 10px;
     padding: 10px;
-    height: 70%;
+    height: 100%;
     width: 92%;
 
     overflow: hidden;
     overflow-y: auto;
 
     @media only screen and (min-width: ${laptop}) {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: center;
-
-        height: 85%;
+        margin: 10px 0;
+        height: auto;
     }
 `
 
@@ -140,6 +135,7 @@ const ProfileButton = styled.button`
     border: none;
 
     display: flex;
+    gap: 5px;
     justify-content: space-between;
     align-items: center;
 
