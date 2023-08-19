@@ -33,7 +33,7 @@ const ContentWrapper = styled.div<{ margin: string }>`
 
 const TextWrapper: React.FC<TextWrapperProps> = ({ children, margin }) => {
     return (
-        <ContentWrapper margin={margin}>
+        <ContentWrapper margin={margin} data-testid="textWrapper">
             {children}
         </ContentWrapper>
     );
