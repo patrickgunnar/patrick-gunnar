@@ -4,73 +4,11 @@ import { laptop, laptopL } from "@/app/screens";
 import { styled } from "styled-components";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare, FaInstagramSquare, FaTiktok } from "react-icons/fa";
+import TextWrapper from "@/components/content/text-wrapper";
+import ContentWrapper from "@/components/content/content-wrapper";
+import TitleWrapper from "@/components/content/title-wrapper";
+import ParagraphWrapper from "@/components/content/paragraph-wrapper";
 
-
-const ContentWrapper = styled.div`
-    box-sizing: border-box;
-
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    overflow: hidden;
-    overflow-y: auto;
-
-    @media only screen and (min-width: ${laptop}) {
-        flex-direction: row;
-        justify-content: start;
-        align-items: start;
-    }
-`
-
-const TextWrapper = styled.div`
-    box-sizing: border-box;
-
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0;
-
-    padding: 10px;
-    height: auto;
-    width: 100%;
-
-    @media only screen and (min-width: ${laptop}) {
-        position: relative;
-        left: 2%;
-        width: 75%;
-    }
-`
-
-const TitleWrapper = styled.h3`
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 700;
-    font-size: larger;
-
-    height: auto;
-    width: 100%;
-`
-
-const ParagraphWrapper = styled.p`
-    box-sizing: border-box;
-    padding: 0 10px;
-    margin: .5rem;
-
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-weight: 400;
-    font-size: larger;
-
-    height: auto;
-    width: 100%;
-`
 
 const DockWrapper = styled.div`
     background: var(--background-001);
