@@ -28,9 +28,12 @@ const DockContainer = styled.div<{ margin: string }>`
         margin-bottom: 0;
         align-self: center;
         position: fixed;
+        max-height: 85%;
         width: 20%;
 
         ${ props => props.margin }
+
+        overflow: hidden;
     }
 `
 
