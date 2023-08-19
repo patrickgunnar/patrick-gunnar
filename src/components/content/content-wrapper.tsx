@@ -33,7 +33,7 @@ const ContentContainer = styled.div`
 
 const ContentWrapper: React.FC<ContentWrapperProps> = ({ children }) => {
     return (
-        <ContentContainer>
+        <ContentContainer data-testid="contentWrapper">
             {children}
         </ContentContainer>
     );
