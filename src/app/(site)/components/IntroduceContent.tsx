@@ -1,6 +1,6 @@
 'use client'
 
-import { laptop } from "@/app/screens";
+import { laptop, laptopL } from "@/app/screens";
 import { styled } from "styled-components";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare, FaInstagramSquare, FaTiktok } from "react-icons/fa";
@@ -162,8 +162,11 @@ const ProfileButton = styled.button`
 
     @media only screen and (min-width: ${laptop}) {
         padding: 15px;
-        height: 4rem;
         width: 100%;
+    }
+
+    @media only screen and (min-width: ${laptopL}) {
+        height: 4rem;
     }
 `
 
