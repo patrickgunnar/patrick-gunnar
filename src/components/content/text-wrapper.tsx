@@ -6,9 +6,10 @@ import { styled } from "styled-components";
 
 interface TextWrapperProps {
     children: React.ReactNode
+    margin: string
 }
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled.div<{ margin: string }>`
     box-sizing: border-box;
 
     display: flex;
@@ -24,14 +25,15 @@ const ContentWrapper = styled.div`
 
     @media only screen and (min-width: ${laptop}) {
         position: relative;
-        left: 2%;
         width: 75%;
+
+        ${ props => props.margin }
     }
 `
 
-const TextWrapper: React.FC<TextWrapperProps> = ({ children }) => {
+const TextWrapper: React.FC<TextWrapperProps> = ({ children, margin }) => {
     return (
-        <ContentWrapper>
+        <ContentWrapper margin={margin}>
             {children}
         </ContentWrapper>
     );

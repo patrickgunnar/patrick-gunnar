@@ -6,9 +6,10 @@ import { styled } from "styled-components";
 
 interface DockWrapperProps {
     children: React.ReactNode
+    margin: string
 }
 
-const DockContainer = styled.div`
+const DockContainer = styled.div<{ margin: string }>`
     background: var(--background-001);
     filter: drop-shadow(0 0 1px var(--background-006));
     box-sizing: border-box;
@@ -27,14 +28,15 @@ const DockContainer = styled.div`
         margin-bottom: 0;
         align-self: center;
         position: fixed;
-        right: 2%;
         width: 20%;
+
+        ${ props => props.margin }
     }
 `
 
-const DockWrapper: React.FC<DockWrapperProps> = ({ children }) => {
+const DockWrapper: React.FC<DockWrapperProps> = ({ children, margin }) => {
     return (
-        <DockContainer>
+        <DockContainer margin={margin}>
             {children}
         </DockContainer>
     );
