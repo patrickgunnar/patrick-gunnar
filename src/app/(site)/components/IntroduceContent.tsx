@@ -15,6 +15,7 @@ const ContentWrapper = styled.div`
     justify-content: start;
     align-items: center;
 
+    position: relative;
     height: 100%;
     width: 100%;
 
@@ -23,7 +24,8 @@ const ContentWrapper = styled.div`
 
     @media only screen and (min-width: ${laptop}) {
         flex-direction: row;
-        justify-content: center;
+        justify-content: start;
+        align-items: start;
     }
 `
 
@@ -35,12 +37,15 @@ const TextWrapper = styled.div`
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    margin: 20px 0;
 
     padding: 10px;
     height: auto;
     width: 100%;
 
     @media only screen and (min-width: ${laptop}) {
+        position: relative;
+        left: 2%;
         width: 75%;
     }
 `
@@ -84,6 +89,9 @@ const DockWrapper = styled.div`
 
     @media only screen and (min-width: ${laptop}) {
         margin-bottom: 0;
+        align-self: center;
+        position: fixed;
+        right: 2%;
         width: 20%;
     }
 `
