@@ -136,7 +136,7 @@ const ProfileButton = styled.button`
 
     display: flex;
     gap: 5px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     cursor: pointer;
