@@ -8,31 +8,8 @@ import TextWrapper from "@/components/content/text-wrapper";
 import ContentWrapper from "@/components/content/content-wrapper";
 import TitleWrapper from "@/components/content/title-wrapper";
 import ParagraphWrapper from "@/components/content/paragraph-wrapper";
+import DockWrapper from "@/components/content/dock-wrapper";
 
-
-const DockWrapper = styled.div`
-    background: var(--background-001);
-    filter: drop-shadow(0 0 1px var(--background-006));
-    box-sizing: border-box;
-    border-radius: 12px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 15px;
-    height: auto;
-    width: 90%;
-
-    @media only screen and (min-width: ${laptop}) {
-        margin-bottom: 0;
-        align-self: center;
-        position: fixed;
-        right: 2%;
-        width: 20%;
-    }
-`
 
 const TitleFrame = styled.label`
     background: linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);
