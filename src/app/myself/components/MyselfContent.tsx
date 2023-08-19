@@ -98,19 +98,36 @@ const MyselfContent = () => {
                 </DockWrapper>
             </DockContainer>
             <TextWrapper margin="left: 22%;">
-                <TitleWrapper>Title</TitleWrapper>
+                <TitleWrapper>
+                    A warm embrace, fellow traveler of the digital ether,
+                </TitleWrapper>
                 <ParagraphWrapper>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Ultrices gravida dictum fusce ut placerat orci nulla. Ultrices mi tempus imperdiet nulla malesuada pellentesque. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Dolor sit amet consectetur adipiscing elit. Semper viverra nam libero justo laoreet sit. Diam in arcu cursus euismod. Volutpat ac tincidunt vitae semper quis. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Feugiat in ante metus dictum at tempor commodo ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Egestas congue quisque egestas diam in arcu cursus euismod. Malesuada bibendum arcu vitae elementum. Quis auctor elit sed vulputate mi sit amet mauris.
-
-                    Urna id volutpat lacus laoreet non. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Massa tincidunt dui ut ornare lectus sit amet est placerat. Nisl suscipit adipiscing bibendum est ultricies integer. Congue eu consequat ac felis donec et odio pellentesque diam. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Sed viverra tellus in hac habitasse platea dictumst. Curabitur gravida arcu ac tortor. At urna condimentum mattis pellentesque id nibh. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Mauris in aliquam sem fringilla. Aenean sed adipiscing diam donec adipiscing tristique risus. Feugiat scelerisque varius morbi enim. Justo nec ultrices dui sapien. Magna eget est lorem ipsum dolor. Ipsum faucibus vitae aliquet nec ullamcorper. Ullamcorper eget nulla facilisi etiam dignissim.
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut lectus arcu bibendum at varius vel pharetra vel turpis. Ultrices gravida dictum fusce ut placerat orci nulla. Ultrices mi tempus imperdiet nulla malesuada pellentesque. In hendrerit gravida rutrum quisque non tellus orci ac auctor. Dolor sit amet consectetur adipiscing elit. Semper viverra nam libero justo laoreet sit. Diam in arcu cursus euismod. Volutpat ac tincidunt vitae semper quis. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Feugiat in ante metus dictum at tempor commodo ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Egestas congue quisque egestas diam in arcu cursus euismod. Malesuada bibendum arcu vitae elementum. Quis auctor elit sed vulputate mi sit amet mauris.
-
-                    Urna id volutpat lacus laoreet non. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Massa tincidunt dui ut ornare lectus sit amet est placerat. Nisl suscipit adipiscing bibendum est ultricies integer. Congue eu consequat ac felis donec et odio pellentesque diam. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Sed viverra tellus in hac habitasse platea dictumst. Curabitur gravida arcu ac tortor. At urna condimentum mattis pellentesque id nibh. Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Mauris in aliquam sem fringilla. Aenean sed adipiscing diam donec adipiscing tristique risus. Feugiat scelerisque varius morbi enim. Justo nec ultrices dui sapien. Magna eget est lorem ipsum dolor. Ipsum faucibus vitae aliquet nec ullamcorper. Ullamcorper eget nulla facilisi etiam dignissim.
+                    kindred soul who walks the labyrinth of words. As I guide your steps through the corridors of my existence, allow me to unveil the enigmatic tapestry that is my world, one imbued with precision, creativity, mystique, and intelligence.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    Picture a man of introverted essence, whose thirst for knowledge is rivaled only by his love for the craft of programming. A conjurer of digital realms, I seamlessly weave the threads of Next.js, React.js, TypeScript, and more, creating experiences that resonate with a mysteriously intelligent allure.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    Let me share a secret—I'm an autodidact, a seeker of truths who embraces the languages of the web and the languages of the soul. Through my own effort, I've harnessed the power of English speech and the symphony of website creation. Like a modern-day mage, I've summoned knowledge from the depths of my being.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    Fantasy, oh how it dances in the alcoves of my mind! "Lord of the Rings," a cherished tome, takes me on journeys to realms unknown. But the silver screen also beckons, with "O Auto da Compadecida" and "Cruella" whispering tales of shadows and light, mirroring my own intricate nature.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    Ah, music—a language that needs no translation. From Britney Spears' ethereal melodies to Guns 'n' Roses' thunderous crescendos, my playlist echoes with the diversity of my soul. Yet, my heart beats to the indie and MPB rhythms, a realm where Rita Lee reigns as the queen of Brazilian rock. Cássia Eller, Pitty, Renato Russo, Raul Seixas, and Manu Gavassi add layers of melody to my existence, a symphony of sonic exploration.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    From the heart of Brazil's embrace, I emerge, a steward of the Mineiro culture. In the kitchen, I am both alchemist and artisan, summoning flavors that pay homage to my roots. Pão de Queijo, a delicacy that embodies the essence of Minas Gerais, captivates my palate with its enchanting blend of cheese, particularly the smoky allure of Mineiro cheese.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    And to you, dear reader, I extend an invitation to partake in the symphony of my existence. With precision and creativity, I craft digital wonders that resonate with your deepest desires. As you traverse this labyrinth of words, may you feel the warmth of my narrative embrace, a connection woven with threads of intimacy and intelligence.
+                </ParagraphWrapper>
+                <ParagraphWrapper>
+                    Thus, I stand before you—an artisan of the web, an explorer of realms both real and virtual, a guardian of culture, and a purveyor of the mystique that makes life an enigmatic masterpiece.
                 </ParagraphWrapper>
             </TextWrapper>
         </ContentWrapper>
     );
 }
- 
+
 export default MyselfContent;
