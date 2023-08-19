@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import Navbar from "../navbar/navbar";
 import Table from "../table/table";
 import { tablet, laptopL } from "@/app/screens";
+import { useEffect, useState } from "react";
 
 
 interface ContainerProps {
@@ -46,13 +47,24 @@ const ContainerContent = styled.div`
 `
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
+    const [isClient, setIsClient] = useState<boolean>(false)
+
+    useEffect(() => {
+        // set client
+        setIsClient(true)
+    }, [])
+
     return (
-        <ContainerContent data-testid="containerContent">
-            <Navbar />
-            <Table>
-                {children}
-            </Table>
-        </ContainerContent>
+        isClient ? (
+            <ContainerContent data-testid="containerContent">
+                <Navbar />
+                <Table>
+                    {children}
+                </Table>
+            </ContainerContent>
+        ) : (
+            <div>Loading...</div>
+        )
     );
 }
  
