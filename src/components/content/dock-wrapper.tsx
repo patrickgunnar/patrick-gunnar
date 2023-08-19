@@ -39,7 +39,7 @@ const DockContainer = styled.div<{ margin: string }>`
 
 const DockWrapper: React.FC<DockWrapperProps> = ({ children, margin }) => {
     return (
-        <DockContainer margin={margin}>
+        <DockContainer margin={margin} data-testid="dockWrapper">
             {children}
         </DockContainer>
     );
