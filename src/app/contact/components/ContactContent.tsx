@@ -194,9 +194,14 @@ const ContactContent = () => {
         try {
             if (email && name && message) {
                 const response = await axios.post('/api/message', { name, email, message })
-                const status = response.data
+                const { message: statusMsg } = response.data
 
-                if (status === 200) {
+                if (statusMsg === 'Email sent successfully!') {
+                    // reset data
+                    setEmail('')
+                    setName('')
+                    setMessage('')
+
                     toast.success("Emissary of the Ether: Your Message Sets Sail on Digital Winds", { style: customToastStyle })
                 } else {
                     toast.error("Whispers of a Digital Mirage: A Momentary Veil in the Tapestry.", { style: customToastStyle })
