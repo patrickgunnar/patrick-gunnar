@@ -1,8 +1,9 @@
+import ResumeContent from "./components/ResumeContent";
+
+
 export default function Resume() {
 	return (
-		<div>
-			Resumé
-		</div>
+		<ResumeContent />
 	)
 }
 
