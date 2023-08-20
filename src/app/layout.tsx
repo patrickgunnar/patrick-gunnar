@@ -2,6 +2,7 @@ import CanvasTemplate from '@/components/background/canvas-template'
 import './globals.css'
 import type { Metadata } from 'next'
 import Container from '@/components/container/container'
+import { Toaster } from 'react-hot-toast'
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
 						{children}
 					</Container>
 				</main>
+				<Toaster />
 			</body>
 		</html>
 	)
