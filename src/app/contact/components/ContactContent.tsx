@@ -1,6 +1,9 @@
 'use client'
 
 import { laptop, laptopL } from "@/app/screens";
+import axios from "axios";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
 import { styled } from "styled-components";
 
 
@@ -29,7 +32,7 @@ const ContentContainer = styled.div`
     }
 `
 
-const InnerContainer = styled.div`
+const FormContainer = styled.form`
     box-sizing: border-box;
 
     display: flex;
@@ -150,20 +153,55 @@ const TextArea = styled.textarea`
     width: 100%;
 `
 
+const customToastStyle = {
+    background: 'black',
+    color: 'white',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+}
+
 const ContactContent = () => {
+    const [email, setEmail] = useState<string>('')
+    const [name, setName] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setIsLoading(true)
+
+        try {
+            if (email && name && message) {
+                const response = await axios.post('/api/message', { name, email, message })
+                const status = response.data
+
+                if (status === 200) {
+                    toast.success("Emissary of the Ether: Your Message Sets Sail on Digital Winds", { style: customToastStyle })
+                } else {
+                    toast.error("Whispers of a Digital Mirage: A Momentary Veil in the Tapestry.", { style: customToastStyle })
+                }
+            } else {
+                toast.error("Enigmatic Imperatives: Unveiling the Mysteriously Intelligent Quest for Completeness", { style: customToastStyle })
+            }
+        } catch (error) {
+            toast.error("Whispers of a Digital Mirage: A Momentary Veil in the Tapestry.", { style: customToastStyle })
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
     return (
         <ContentContainer>
-            <InnerContainer>
+            <FormContainer onSubmit={handleSubmit}>
                 <ContactTitle>Enigmatic Convergence: Reach Out</ContactTitle>
                 <InputWrapper>
-                    <Input type="text" placeholder="Signature Mark (name)" />
-                    <Input type="email" placeholder="Cyberink Channel (e-mail)" />
-                    <TextArea placeholder="Compose Your Enigma (message)"></TextArea>
+                    <Input type="text" placeholder="Signature Mark (name)" value={name} onChange={(e) => setName(e.target.value)} />
+                    <Input type="email" placeholder="Cyberink Channel (e-mail)" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <TextArea placeholder="Compose Your Enigma (message)" value={message} onChange={(e) => setMessage(e.target.value)}></TextArea>
                 </InputWrapper>
-                <ContactButton>Cipher Transmit</ContactButton>
-            </InnerContainer>
+                <ContactButton type="submit" disabled={isLoading}>Cipher Transmit</ContactButton>
+            </FormContainer>
         </ContentContainer>
     );
 }
- 
+
 export default ContactContent;
