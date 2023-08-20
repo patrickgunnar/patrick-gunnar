@@ -48,19 +48,24 @@ const SkillsTitle = styled.h3`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 40px;
+    margin-bottom: 0;
 
     height: auto;
     width: 100%;
 `
 
 const ContentContainer = styled.div`
+    box-sizing: border-box;
+
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: start;
 
+    padding: 15px;
+    padding-top: 0;
     height: auto;
     width: 90%;
 
