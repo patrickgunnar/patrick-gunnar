@@ -21,7 +21,7 @@ const ContentContainer = styled.div`
     align-items: center;
 
     height: auto;
-    width: 100%;
+    width: 95%;
 
     max-height: 95%;
 
