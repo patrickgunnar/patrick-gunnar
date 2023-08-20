@@ -65,7 +65,7 @@ const ContentContainer = styled.div`
     align-items: start;
 
     padding: 15px;
-    padding-top: 0;
+    padding-top: 5px;
     height: auto;
     width: 90%;
 
