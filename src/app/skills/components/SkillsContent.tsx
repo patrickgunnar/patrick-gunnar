@@ -12,6 +12,10 @@ import {
 
 const InnerContainer = styled.div`
     box-sizing: border-box;
+    background: var(--background-001);
+    filter: drop-shadow(0 0 1px var(--background-006));
+    border: none;
+    border-radius: 12px;
 
     display: flex;
     gap: 20px;
