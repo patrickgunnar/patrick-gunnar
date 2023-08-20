@@ -129,6 +129,17 @@ const Input = styled.input`
 
     height: 50px;
     width: 100%;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active{
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow: inset 0 0 20px 20px var(--background-005);
+        filter: drop-shadow(0 0 1px var(--background-005));
+    }
 `
 
 const TextArea = styled.textarea`
@@ -151,6 +162,17 @@ const TextArea = styled.textarea`
 
     height: 200px;
     width: 100%;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active{
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-box-shadow: inset 0 0 20px 20px var(--background-005);
+        filter: drop-shadow(0 0 1px var(--background-005));
+    }
 `
 
 const customToastStyle = {
