@@ -19,21 +19,29 @@ const CanvasTemplate = () => {
 
         if(!context) return
 
-        // set canvas height and width
-        canvasElement.height = window.innerHeight
-        canvasElement.width = window.innerWidth
-
         // matrix content
         const matrix = (
             'Unveil the Hidden Gem: Welcome the Maestro of Code, the Artisan of Innovation, Patrick Gunnar, to Elevate the Digital Symphony of Your Company with Unsurpassed Full-Stack Mastery'
         ).split('')
         const fontSize = 12
         // size of the matrix columns
-        const columns = canvasElement.width / fontSize
+        let columns = canvasElement.width / fontSize
         // array drops
         const drops: number[] = []
 
         for(let x = 0; x < columns; x++) drops[x] = 1
+
+        // screen resize handler
+        const handleResize = () => {
+            // set canvas height and width
+            canvasElement.height = window.innerHeight
+            canvasElement.width = window.innerWidth
+            // size of the matrix columns
+            columns = canvasElement.width / fontSize
+
+            // Reset drop positions on screen resize
+            for(let x = 0; x < columns; x++) drops[x] = 1
+        }
 
         // draw the characters
         const handleDraw = () => {
@@ -64,11 +72,16 @@ const CanvasTemplate = () => {
             })
         }
 
+        // set resize event
+        window.addEventListener('resize', handleResize)
+
+        handleResize()
         // set matrix interval
         intervalRef.current = setInterval(handleDraw, 35)
 
         return () => {
             clearInterval(intervalRef.current)
+            window.removeEventListener('resize', handleResize)
         }
     }, [])
 
