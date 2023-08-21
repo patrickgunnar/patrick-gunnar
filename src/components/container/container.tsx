@@ -47,6 +47,19 @@ const ContainerContent = styled.div`
     }
 `
 
+const LoadingContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+`
+
 const Container: React.FC<ContainerProps> = ({ children }) => {
     const [isClient, setIsClient] = useState<boolean>(false)
 
@@ -64,7 +77,9 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
                 </Table>
             </ContainerContent>
         ) : (
-            <LoadingWave />
+            <LoadingContainer>
+                <LoadingWave />
+            </LoadingContainer>
         )
     );
 }
