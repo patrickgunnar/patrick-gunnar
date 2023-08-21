@@ -22,7 +22,7 @@ const NavbarContainer = styled.section`
 
 const DesktopNav = styled.nav`
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(0, calc(92% / 7)));
+    grid-template-columns: repeat(auto-fit, minmax(0, calc(92% / 6)));
 
     height: 100%;
     width: 100%;
@@ -38,16 +38,15 @@ const DesktopNav = styled.nav`
 `
 
 const NavbarOpt = styled.button<{ disabled: boolean }>`
-    background: ${
-        (props) => props.disabled ? (
-            'linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);'
-        ) : (
-            'transparent'
-        )
+    background: ${(props) => props.disabled ? (
+        'linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);'
+    ) : (
+        'transparent'
+    )
     };
     border: none;
 
-    cursor: ${ (props) => props.disabled ? 'default' : 'pointer' };
+    cursor: ${(props) => props.disabled ? 'default' : 'pointer'};
     color: inherit;
     font-weight: 400;
     font-family: 'Tektur', cursive;
@@ -96,12 +95,11 @@ const MobileContainer = styled.section`
 `
 
 const MobileMenu = styled.button<{ open: boolean }>`
-    background: ${
-        (props) => props.open ? (
-            'linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);'
-        ) : (
-            'transparent'
-        )
+    background: ${(props) => props.open ? (
+        'linear-gradient(109.6deg, var(--background-015) 11.2%, var(--background-014) 51.2%, var(--background-005) 98.6%);'
+    ) : (
+        'transparent'
+    )
     };
     border: none;
     border: none;
@@ -170,7 +168,7 @@ const MobileNav = styled.nav`
     border: none;
 
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(0, calc(100% / 7)));
+    grid-template-rows: repeat(auto-fit, minmax(0, calc(100% / 6)));
 
     position: absolute;
     z-index: 100;
@@ -183,6 +181,8 @@ const MobileNav = styled.nav`
         display: none;
     }
 `
+
+const options = ['Home', 'Myself', 'Skills', 'Projects', 'Resumé', 'Contact']
 
 const Navbar = () => {
     // get router
@@ -198,7 +198,7 @@ const Navbar = () => {
         router.push(route)
 
         // if isMobileOpen is true
-        if(isMobileOpen) setIsMobileOpen(false)
+        if (isMobileOpen) setIsMobileOpen(false)
     }
 
     // open mobile menu handler
@@ -206,31 +206,35 @@ const Navbar = () => {
         setIsMobileOpen(!state)
     }
 
+    // remove accents handler
+    const handleAccentsRemove = (str: string) => {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    }
+
+    // menu options
+    const menuOptions = (
+        <>
+            {
+                options.map(item => {
+                    const currentOpt = `/${item !== 'Home' ? handleAccentsRemove(item) : ''}`
+
+                    return (
+                        <NavbarOpt key={item} 
+                            onClick={() => handleRouting(currentOpt)} disabled={pathname === currentOpt}
+                        >
+                            {item}
+                        </NavbarOpt>
+                    )
+                })
+            }
+        </>
+    )
+
     return (
         <>
             <NavbarContainer>
                 <DesktopNav>
-                    <NavbarOpt onClick={() => handleRouting('/')} disabled={pathname === '/'}>
-                        Home
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/myself')} disabled={pathname === '/myself'}>
-                        Myself
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/skills')} disabled={pathname === '/skills'}>
-                        Skills
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/projects')} disabled={pathname === '/projects'}>
-                        Projects
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/resume')} disabled={pathname === '/resume'}>
-                        Resumé
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/contact')} disabled={pathname === '/contact'}>
-                        Contact
-                    </NavbarOpt>
-                    <NavbarOpt onClick={() => handleRouting('/articles')} disabled={pathname === '/articles'}>
-                        Articles
-                    </NavbarOpt>
+                    {menuOptions}
                 </DesktopNav>
                 <MobileContainer>
                     <MobileMenu open={isMobileOpen} onClick={() => handleMobileOpen(isMobileOpen)} data-testid="mobileMenuBtn">
@@ -243,45 +247,24 @@ const Navbar = () => {
                         }
                     </MobileMenu>
                     <MobileLabel>
-                        { pathname === '/' && 'Home: Engaging Introduction' }
-                        { pathname === '/myself' && 'Myself: The Web Artisan!' }
-                        { pathname === '/skills' && 'Skills: Expert Proficiency' }
-                        { pathname === '/projects' && 'Projects: Innovative Showcases' }
-                        { pathname === '/resume' && 'Resumé: Accomplishments Summary' }
-                        { pathname === '/contact' && 'Contact: Connection Details' }
-                        { pathname === '/articles' && 'Articles: Insightful Publications' }
+                        {pathname === '/' && 'Home: Engaging Introduction'}
+                        {pathname === '/myself' && 'Myself: The Web Artisan!'}
+                        {pathname === '/skills' && 'Skills: Expert Proficiency'}
+                        {pathname === '/projects' && 'Projects: Innovative Showcases'}
+                        {pathname === '/resume' && 'Resumé: Accomplishments Summary'}
+                        {pathname === '/contact' && 'Contact: Connection Details'}
                     </MobileLabel>
                 </MobileContainer>
             </NavbarContainer>
             {
                 isMobileOpen && (
                     <MobileNav>
-                        <NavbarOpt onClick={() => handleRouting('/')} disabled={pathname === '/'}>
-                            Home
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/myself')} disabled={pathname === '/myself'}>
-                            Myself
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/skills')} disabled={pathname === '/skills'}>
-                            Skills
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/projects')} disabled={pathname === '/projects'}>
-                            Projects
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/resume')} disabled={pathname === '/resume'}>
-                            Resumé
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/contact')} disabled={pathname === '/contact'}>
-                            Contact
-                        </NavbarOpt>
-                        <NavbarOpt onClick={() => handleRouting('/articles')} disabled={pathname === '/articles'}>
-                            Articles
-                        </NavbarOpt>
+                        {menuOptions}
                     </MobileNav>
                 )
             }
         </>
     );
 }
- 
+
 export default Navbar;
