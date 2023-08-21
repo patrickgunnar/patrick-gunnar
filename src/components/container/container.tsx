@@ -5,6 +5,7 @@ import Navbar from "../navbar/navbar";
 import Table from "../table/table";
 import { tablet, laptopL } from "@/app/screens";
 import { useEffect, useState } from "react";
+import LoadingWave from "../loading/loading-wave";
 
 
 interface ContainerProps {
@@ -63,7 +64,7 @@ const Container: React.FC<ContainerProps> = ({ children }) => {
                 </Table>
             </ContainerContent>
         ) : (
-            <div>Loading...</div>
+            <LoadingWave />
         )
     );
 }
