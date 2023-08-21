@@ -112,7 +112,7 @@ const ResumeButton = styled.button`
     }
 `
 
-const cvUrl = 'https://drive.google.com/file/d/11aCm-uq8FNzILcX0IMPZLSaOWEtMJZ5s/view?usp=sharing'
+const cvUrl = 'https://drive.google.com/file/d/18KyH_uAtrjq574czNeZPoyNr_tr1KShr/view?usp=sharing'
 
 const ResumeContent = () => {
     // cv page open handler
