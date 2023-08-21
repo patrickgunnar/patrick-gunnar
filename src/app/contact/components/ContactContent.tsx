@@ -176,9 +176,9 @@ const TextArea = styled.textarea`
 `
 
 const customToastStyle = {
-    background: 'black',
+    background: '#537895',
     color: 'white',
-    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)'
+    boxShadow: '0px 4px 8px #ffffff26'
 }
 
 const ContactContent = () => {
@@ -225,7 +225,11 @@ const ContactContent = () => {
                     <Input type="email" placeholder="Cyberink Channel (e-mail)" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <TextArea placeholder="Compose Your Enigma (message)" value={message} onChange={(e) => setMessage(e.target.value)}></TextArea>
                 </InputWrapper>
-                <ContactButton type="submit" disabled={isLoading}>Cipher Transmit</ContactButton>
+                <ContactButton type="submit" disabled={isLoading}>
+                    {
+                        !isLoading ? 'Cipher Transmit' : 'Transmiting...'
+                    }
+                </ContactButton>
             </FormContainer>
         </ContentContainer>
     );
