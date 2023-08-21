@@ -24,12 +24,13 @@ const CanvasTemplate = () => {
             'Unveil the Hidden Gem: Welcome the Maestro of Code, the Artisan of Innovation, Patrick Gunnar, to Elevate the Digital Symphony of Your Company with Unsurpassed Full-Stack Mastery'
         ).split('')
         const fontSize = 12
-        // size of the matrix columns
-        let columns = canvasElement.width / fontSize
+        // size of the matrix columns and rows
+        let columns = Math.floor(canvasElement.width / fontSize)
+        let rows = Math.floor(canvasElement.height / fontSize)
         // array drops
         const drops: number[] = []
 
-        for(let x = 0; x < columns; x++) drops[x] = 1
+        for(let x = 0; x < columns; x++) drops[x] = Math.floor(Math.random() * rows)
 
         // screen resize handler
         const handleResize = () => {
@@ -37,10 +38,11 @@ const CanvasTemplate = () => {
             canvasElement.height = window.innerHeight
             canvasElement.width = window.innerWidth
             // size of the matrix columns
-            columns = canvasElement.width / fontSize
+            columns = Math.floor(canvasElement.width / fontSize)
+            rows = Math.floor(canvasElement.height / fontSize)
 
             // Reset drop positions on screen resize
-            for(let x = 0; x < columns; x++) drops[x] = 1
+            for(let x = 0; x < columns; x++) drops[x] = Math.floor(Math.random() * rows)
         }
 
         // draw the characters
@@ -54,16 +56,16 @@ const CanvasTemplate = () => {
             context.font = `${fontSize}px arial`
 
             // loop over the drops
-            drops.forEach((_, index) => {
+            drops.forEach((drop, index) => {
                 // select a random charater
                 const char = matrix[Math.floor(Math.random() * matrix.length)]
 
                 // fill context text
-                context.fillText(char, index * fontSize, drops[index] * fontSize)
+                context.fillText(char, index * fontSize, drop * fontSize)
 
                 // reset the dropping to the top after it reached the bottom
                 // gen a random number to make the reset dropping on the Y axis
-                if(drops[index] * fontSize > canvasElement.height && Math.random() > 0.975) {
+                if(drop * fontSize > canvasElement.height && Math.random() > 0.975) {
                     drops[index] = 0
                 }
 
