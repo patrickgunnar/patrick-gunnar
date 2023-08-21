@@ -35,8 +35,8 @@ const CanvasTemplate = () => {
         // screen resize handler
         const handleResize = () => {
             // set canvas height and width
-            canvasElement.height = window.outerHeight
-            canvasElement.width = window.outerWidth
+            canvasElement.height = window.innerHeight
+            canvasElement.width = window.innerWidth
             // size of the matrix columns
             columns = Math.floor(canvasElement.width / fontSize)
             rows = Math.floor(canvasElement.height / fontSize)
