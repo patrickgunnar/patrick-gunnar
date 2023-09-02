@@ -168,6 +168,7 @@ const Button = styled.button`
 
 const projects = [
     { name: 'OrionRent', url: 'https://orionrent.vercel.app/', github: 'https://github.com/patrickgunnar/orion-rent-app' },
+    { name: 'Thorpad', url: 'https://thorpad.vercel.app/', github: 'https://github.com/patrickgunnar/thorpad-app' },,
     { name: 'VirgoChat', url: 'https://virgochat.vercel.app/', github: 'https://github.com/patrickgunnar/virgo-app' },
     { name: 'Atomico', url: 'https://atomico-todo-app.vercel.app/', github: 'https://github.com/patrickgunnar/atomico-todo-app' },
     { name: 'SunTime', url: 'https://sun-time-app.vercel.app/', github: 'https://github.com/patrickgunnar/sun-time-app' },
