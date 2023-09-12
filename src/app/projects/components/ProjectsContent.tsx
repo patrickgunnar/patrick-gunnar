@@ -41,7 +41,7 @@ const ContentContainer = styled.div`
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: start;
 
     padding: 5px;
