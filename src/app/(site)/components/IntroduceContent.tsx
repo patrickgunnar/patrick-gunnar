@@ -96,6 +96,11 @@ const ProfileLabel = styled.label`
     width: auto;
 `
 
+const Margin = styled.div`
+    height: 50px;
+
+`
+
 const IntroduceContent = () => {
     // open profile in new window handler
     const handleProfileOpen = (url: string) => {
@@ -126,6 +131,7 @@ const IntroduceContent = () => {
                 <ParagraphWrapper>
                     In this realm of endless possibilities, I extend my hand to you, fellow explorer. Let curiosity guide our steps as we craft, create, and conjure the future of the digital landscape.
                 </ParagraphWrapper>
+                <Margin />
             </TextWrapper>
             <DockWrapper margin="right: 2%;">
                 <TitleFrame>Harmonizing Tunes</TitleFrame>
