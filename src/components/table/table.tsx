@@ -8,12 +8,15 @@ interface TableProps {
 }
 
 const TableContainer = styled.article`
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
     position: relative;
+    padding: 20px 0;
 
     height: 91%;
     width: 100%;
