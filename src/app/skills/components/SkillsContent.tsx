@@ -6,7 +6,7 @@ import { styled } from "styled-components";
 import { 
     SiCss3, SiCypress, SiHtml5, SiJavascript, SiJest, SiMongodb, SiNextdotjs, 
     SiPrisma, SiPusher, SiReact, SiStylelint, SiSupabase, SiTailwindcss, 
-    SiTestinglibrary, SiTypescript, SiRedux, SiPython, SiExpress
+    SiTestinglibrary, SiTypescript, SiRedux, SiPython, SiExpress, SiNodedotjs
 } from "react-icons/si";
 
 
@@ -104,8 +104,8 @@ const skills = [
     { name: 'Next.js', icon: SiNextdotjs }, { name: 'React.js', icon: SiReact }, { name: 'TypeScript', icon: SiTypescript },
     { name: 'Redux', icon: SiRedux }, { name: 'Express.js', icon: SiExpress }, { name: 'Tailwind', icon: SiTailwindcss }, 
     { name: 'styled-components', icon: SiStylelint }, { name: 'JavaScript', icon: SiJavascript }, { name: 'Python', icon: SiPython }, 
-    { name: 'CSS', icon: SiCss3 }, { name: 'HTML5', icon: SiHtml5 }, { name: 'MongoDB', icon: SiMongodb }, { name: 'Supabase', icon: SiSupabase }, 
-    { name: 'Prisma', icon: SiPrisma }, { name: 'Pusher', icon: SiPusher }, { name: 'Jest', icon: SiJest }, 
+    { name: 'CSS', icon: SiCss3 }, { name: 'HTML5', icon: SiHtml5 }, { name: 'Node.js', icon: SiNodedotjs }, { name: 'MongoDB', icon: SiMongodb }, 
+    { name: 'Supabase', icon: SiSupabase }, { name: 'Prisma', icon: SiPrisma }, { name: 'Pusher', icon: SiPusher }, { name: 'Jest', icon: SiJest }, 
     { name: 'Testing Library', icon: SiTestinglibrary }, { name: 'Cypress', icon: SiCypress },
 ]
 
